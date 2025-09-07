@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+}
+
+group = 'ee.sandrak.imdb'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+configurations {
+    agent
+}
+
+dependencies {
+    // Selenide
+    testImplementation 'com.codeborne:selenide:7.9.3'
+
+    // TestNG
+    testImplementation 'org.testng:testng:7.11.0'
+
+    // Allure + Selenide listener
+    testImplementation 'io.qameta.allure:allure-testng:2.29.1'
+    testImplementation 'io.qameta.allure:allure-selenide:2.29.1'
+
+    // AspectJ weaver (vajalik @Step, @Attachment annotatsioonideks)
+    agent 'org.aspectj:aspectjweaver:1.9.24'
+}
+
+test {
+    useTestNG() {
+        suites 'src/test/resources/testng.xml'
+    }
+    systemProperty 'allure.results.directory', "${buildDir}/allure-results"
+    systemProperty 'selenide.browser', System.getProperty('selenide.browser', 'chrome')
+    jvmArgs "-javaagent:${configurations.agent.singleFile}"
+
+    // So Gradle doesn’t “skip” producing Allure files when restoring from cache
+    outputs.dir("$buildDir/allure-results")
+    }

@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="LuminorHomeTask - IMDB Suite" verbose="1" parallel="false">
+  <listeners>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+  </listeners>
+  <test name="LuminorHomeTask 8 steps and one for good measure">
+    <classes>
+      <class name="ee.sandrak.imdb.tests.LuminorTask"/>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,1 @@
+{"uuid":"460f1aac-8d39-4c87-8ceb-b20d657a642b","name":"ee.sandrak.imdb.tests.SmokeImdbOpenAndSearch","children":["6d0ede69-95c1-4043-912f-8a8364cf4c8a"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1757098702990,"stop":1757098702997}],"afters":[],"start":1757098702970,"stop":1757098705788}

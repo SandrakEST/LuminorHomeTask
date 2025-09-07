@@ -1,0 +1,1 @@
+{"uuid":"c2b0a1f4-85e6-4414-a0b8-daad931dc2d1","name":"ee.sandrak.imdb.tests.LuminorTask","children":["c11fbc0a-d695-45ea-b85f-1e3e4982cd2b"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1757274556185,"stop":1757274556193}],"afters":[],"start":1757274556167,"stop":1757274567221}
